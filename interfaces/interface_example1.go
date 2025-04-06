@@ -1,4 +1,4 @@
-package speaker
+package interfaces
 
 import "fmt"
 
@@ -42,8 +42,9 @@ func LetThemSpeak(speakers []Speaker) {
 }
 
 // SpeakerDemo function to demonstrate polymorphism
-func SpeakerDemo() {
+func RunMainInterfaceExample1() {
 	// Create multiple Speaker instances
+	fmt.Println("*******----Start Interface Speaker Examples----***********")
 	speakers := []Speaker{
 		Dog{Name: "Buddy"},
 		Cat{Name: "Whiskers"},
@@ -52,4 +53,7 @@ func SpeakerDemo() {
 
 	// Let all speakers speak using polymorphism
 	LetThemSpeak(speakers)
+
+	fmt.Println("*******----End Interface Speaker Examples----***********")
+
 }
