@@ -26,9 +26,6 @@ func bufferedChannel() {
 }
 
 func RunGoroutineExample1() {
-	go func ()  {
-		
-	}
 	bufferedChannel()
 	time.Sleep(time.Second * 2)
 	fmt.Println("hi")
