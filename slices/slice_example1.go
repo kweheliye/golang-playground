@@ -2,7 +2,18 @@ package main
 
 import "fmt"
 
+func remove(s []int, index int) []int {
+	if index < 0 || index >= len(s) {
+		return s // return unchanged if index is out of range
+	}
+	return append(s[:index], s[index+1:]...)
+}
+
 func main() {
+
+	arr1 := []int{1, 2, 3, 4, 5, 7}
+	arr1 = remove(arr1, 2) // removes element at index 2 (value 3)
+	fmt.Println(arr1)      // Output: [1 2 4 5 7]
 
 	fmt.Println("************slice example1************")
 	arr := []int{1, 2, 3, 4, 5, 7}
